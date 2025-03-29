@@ -1,0 +1,1 @@
+// Pantallas principales (ej. HomeScreen, LoginScreen). //
