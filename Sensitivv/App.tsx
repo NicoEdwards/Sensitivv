@@ -18,17 +18,13 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           {isAuthenticated ? (
-            <Stack.Screen name="Main">
-              {() => <TabNavigator />}
-            </Stack.Screen>
+            <Stack.Screen name="Main" component={TabNavigator} />
           ) : (
             <>
               <Stack.Screen name="Login">
                 {() => <LoginScreen onLogin={() => setIsAuthenticated(true)} />}
               </Stack.Screen>
-              <Stack.Screen name="SignUp">
-                {() => <SignUpScreen onSignUp={() => setIsAuthenticated(true)} />}
-              </Stack.Screen>
+              <Stack.Screen name="SignUp" component={SignUpScreen} />
             </>
           )}
         </Stack.Navigator>
